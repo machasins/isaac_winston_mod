@@ -1,4 +1,4 @@
-![](https://i.imgur.com/t3mr8c7.png)
+![](https://i.imgur.com/euYr5kH.png)
 
 This mod simply plays a Winston voiceline, "Hi There", whenever the trinket Monkey Paw appears.
 Does not include Winston resprite, go [here](https://steamcommunity.com/sharedfiles/filedetails/?id=2924047210) for that.
