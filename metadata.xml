@@ -2,8 +2,9 @@
 <metadata>
     <name>Winston says Hi [SFX]</name>
     <directory>winstons says hi</directory>
+    <id>3220375533</id>
     <description>[img=https://i.imgur.com/euYr5kH.png][/img]
-This mod simply plays a Winston voiceline, "Hi There", whenever the trinket Monkey Paw appears.
+This mod simply plays a Winston voiceline, &quot;Hi There&quot;, whenever the trinket Monkey Paw appears.
 Does not include Winston resprite, go [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2924047210]here[/url] for that.
 
 Issues? Report it [url=https://github.com/machasins/isaac_winston_mod/issues]here[/url] or in the comments of this mod.
@@ -18,10 +19,10 @@ I used [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3034946842]Em
 
 
 This is truly a Mattman moment.</description>
-    <version>1.0</version>
+    <version>1.2</version>
     <visibility>Private</visibility>
     <tag id="Lua"/>
-    <tag id="Items"/>
+    <tag id="Trinkets"/>
     <tag id="Tweaks"/>
     <tag id="Sound Effects"/>
 </metadata>
