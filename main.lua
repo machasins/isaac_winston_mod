@@ -1,4 +1,4 @@
-local mod = RegisterMod("Winston's Paw", 1)
+local mod = RegisterMod("Winston says Hi", 1)
 local game = Game()
 
 local config = include("wp.mcm")

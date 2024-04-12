@@ -1,8 +1,8 @@
 local json = require("json")
 
-local mod = RegisterMod("Winston's Paw MCM", 1)
+local mod = RegisterMod("Winston says Hi MCM", 1)
 
-mod.name = "Winston's Paw"
+mod.name = "Winston says Hi"
 mod.settings = {
     oncePerRoom = true,
     volume = 5
