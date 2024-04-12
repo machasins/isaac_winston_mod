@@ -2,7 +2,11 @@
 <metadata>
     <name>Winston's Paw [SFX]</name>
     <directory>winstons paw</directory>
-    <description>nice</description>
+    <description>This mod simply plays a Winston voiceline, "Hi There", whenever the trinket Monkey Paw appears.
+
+Can be configured with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2681875787]Mod Config Menu[/url] to adjust when the sound plays and how loud it is.
+
+Thanks to [url=https://www.youtube.com/@lazymattman]Lazy Mattman for inspiration and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2924047210]shart for the inital mod.</description>
     <version>1.0</version>
     <visibility>Private</visibility>
     <tag id="Lua"/>
