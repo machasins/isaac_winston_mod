@@ -46,7 +46,7 @@ function mod:CheckForWinston()
         local sfxToPlay = (config.settings.voiceline == "Hi There" and sfxHiThere) or (config.settings.voiceline == "Greetings" and sfxGreetings)
         if sfxToPlay == false then
             -- Get a random sound effect
-            sfxToPlay = RNG():RandomInt(1) > 0 and sfxHiThere or sfxGreetings
+            sfxToPlay = Random() % 2 > 0 and sfxHiThere or sfxGreetings
         end
         -- Queue the Hi There sfx
         mod.sfxQueue[1] = { currentFrame + mod.sfxStartDelay + (doDelay and mod.sfxAppearDelay or 0),
