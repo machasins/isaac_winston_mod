@@ -2,8 +2,25 @@ local json = require("json")
 
 local mod = RegisterMod("Winston says Hi MCM", 1)
 
+local function getTableIndex(tbl, val)
+    for i, v in ipairs(tbl) do
+        if v == val then
+            return i
+        end
+    end
+
+    return 0
+end
+
+local choices = {
+    "Hi There",
+    "Greetings",
+    "All",
+}
+
 mod.name = "Winston says Hi"
 mod.settings = {
+    voiceline = choices[1],
     oncePerRoom = true,
     volume = 5
 }
@@ -44,6 +61,28 @@ function mod:ConfigMenuInit()
                 "Settings for the mod that allows Winston to speak",
                 "This is truly a Mattman moment"
             }
+        }
+    )
+
+    -- Setting for when to play sfx
+    ModConfigMenu.AddSetting(
+        mod.name,
+        nil,
+        {
+            Type = ModConfigMenu.OptionType.NUMBER,
+            CurrentSetting = function()
+                return getTableIndex(choices, mod.settings.voiceline)
+            end,
+            Minimum = 1,
+            Maximum = #choices,
+            Display = function()
+                return "Voiceline to use: " .. mod.settings.voiceline
+            end,
+            OnChange = function(n)
+                mod.settings.voiceline = choices[n]
+            end,
+            -- Text in the "Info" section will automatically word-wrap, unlike in the main section above
+            Info = { "Which voiceline to play when Winston appears. 'All' plays a sound at random" }
         }
     )
 

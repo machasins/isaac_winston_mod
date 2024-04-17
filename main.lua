@@ -7,6 +7,7 @@ local sfx = SFXManager()
 
 -- SFX --
 local sfxHiThere = Isaac.GetSoundIdByName("macha_hiThere")
+local sfxGreetings= Isaac.GetSoundIdByName("macha_greetings")
 
 local WINSTON_ID = TrinketType.TRINKET_MONKEY_PAW -- ID for Winston
 
@@ -41,9 +42,15 @@ function mod:CheckForWinston()
         mod.roomsSfxPlayed[mod.currentRoom] = trinketCount
         -- Get current time, in frames
         local currentFrame = Isaac.GetFrameCount()
+        -- Choose the sound based off config
+        local sfxToPlay = (config.settings.voiceline == "Hi There" and sfxHiThere) or (config.settings.voiceline == "Greetings" and sfxGreetings)
+        if sfxToPlay == false then
+            -- Get a random sound effect
+            sfxToPlay = RNG():RandomInt(1) > 0 and sfxHiThere or sfxGreetings
+        end
         -- Queue the Hi There sfx
         mod.sfxQueue[1] = { currentFrame + mod.sfxStartDelay + (doDelay and mod.sfxAppearDelay or 0),
-            function() sfx:Play(sfxHiThere, mod.defaultVolume * volumeMod, 2, false, 1, 0) end }
+            function() sfx:Play(sfxToPlay, mod.defaultVolume * volumeMod, 2, false, 1, 0) end }
     end
 
     if previous ~= nil and trinketCount < previous then
